@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  database:
+    image: postgres
+    ports:
+    - "5432:5432"
+    volumes:
+    - ./database:/var/lib/postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: postgres
+  dbadmin:
+    image: dpage/pgadmin4
+    ports:
+    - "8090:80"
+    volumes:
+    - ./admin:/var/lib/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@domain.com
+      PGADMIN_DEFAULT_PASSWORD: 1234
