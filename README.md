@@ -1,6 +1,6 @@
 # Some dockers
 
-Collection of docker files created for various projects
+Collection of dockers created for various projects
 
 ## List
 
